@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=1200" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      width: 1200px;
+      height: 630px;
+      background-color: #0d1b2e;
+      font-family: 'Montserrat', sans-serif;
+      color: #ffffff;
+      overflow: hidden;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Dotted texture */
+    .dots {
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(255,255,255,0.06) 1px, transparent 1px);
+      background-size: 28px 28px;
+    }
+
+    /* Glow effects */
+    .glow-left {
+      position: absolute;
+      width: 500px; height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(37,99,235,0.18) 0%, transparent 70%);
+      top: -100px; left: -100px;
+    }
+    .glow-right {
+      position: absolute;
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(37,99,235,0.1) 0%, transparent 70%);
+      bottom: -100px; right: 200px;
+    }
+
+    /* Blue left accent bar */
+    .accent-bar {
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 5px;
+      background: #2563eb;
+    }
+
+    /* Layout */
+    .content {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      width: 100%;
+      padding: 0 80px;
+      gap: 70px;
+    }
+
+    /* Photo */
+    .photo-wrap {
+      flex-shrink: 0;
+      width: 220px;
+      height: 220px;
+      border-radius: 50%;
+      border: 4px solid #2563eb;
+      overflow: hidden;
+      box-shadow: 0 0 60px rgba(37,99,235,0.3);
+    }
+    .photo-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Text */
+    .text { flex: 1; }
+
+    .company {
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: #2563eb;
+      margin-bottom: 16px;
+    }
+
+    .name {
+      font-size: 58px;
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.03em;
+      margin-bottom: 20px;
+    }
+
+    .divider {
+      width: 48px;
+      height: 3px;
+      background: #2563eb;
+      margin-bottom: 20px;
+    }
+
+    .tagline {
+      font-size: 18px;
+      font-weight: 400;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.55;
+      max-width: 420px;
+    }
+
+    /* Bottom URL */
+    .url-badge {
+      position: absolute;
+      bottom: 36px;
+      right: 80px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      color: rgba(255,255,255,0.35);
+      z-index: 1;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="dots"></div>
+  <div class="glow-left"></div>
+  <div class="glow-right"></div>
+  <div class="accent-bar"></div>
+
+  <div class="content">
+    <div class="photo-wrap">
+      <!-- замени путь если нужно -->
+      <img src="assets/img/temirlan-square.jpeg" alt="Temirlan Mukatayev" />
+    </div>
+    <div class="text">
+      <div class="company">True Masters · Founder & CEO</div>
+      <h1 class="name">Temirlan<br>Mukatayev</h1>
+      <div class="divider"></div>
+      <p class="tagline">AI & IT solutions for businesses —<br>from idea to launch.</p>
+    </div>
+  </div>
+
+  <div class="url-badge">truemasters.kz</div>
+
+</body>
+</html>
